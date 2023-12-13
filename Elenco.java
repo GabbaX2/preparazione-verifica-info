@@ -1,4 +1,4 @@
-package lab;
+package labz;
 
 import java.util.Scanner;
 
@@ -93,5 +93,12 @@ public class Elenco {
 
     public void ancoraInGaranzia() {
         final int anno = 2023;
+
+        for (var i = 0; i < strumenti.length; i++) {
+            if (strumenti[i] != null && (anno - strumenti[i].getAq_yr()) <= strumenti[i].getGarancy()) {
+                strumenti[i].printDetails();
+                System.out.println("------------------");
+            }
+        }
     }
 }
